@@ -1,5 +1,6 @@
-# scania-angular-lightbox
-File upload and gallery extension on angularJs framework
+# scania-angular-ui
+
+This repository contains all Scania extensions, you can either download it or download extensions you like to use separately.
 
 Scania angular-ui is a set of native AngularJS extensions including a for file upload and gallery on AngularJs framework and a selection box with support for searching, tagging, ng-model, ng-repeat, native HTML select and option tags.
 
@@ -9,7 +10,6 @@ Scania angular-ui is a set of native AngularJS extensions including a for file u
 
 # Getting Started
 
-This repository contains all Scania extensions, you can either download it or download extensions you like to use separately.
 
 ##Requirements
 
@@ -51,5 +51,9 @@ Next inject the directive into your app
 
 A complete example can be found on respective extension.
 
- <a href="http://embed.plnkr.co/PlVBJeLgy5CgqED6rzQq/preview">Lightbox</a>
+ <a href="http://embed.plnkr.co/PlVBJeLgy5CgqED6rzQq/preview">Lightbox</a><br/>
  <a href="http://embed.plnkr.co/L3YYgq7TEM2mBG9s9we1/preview">Select</a>
+
+For the full version just change the dependency injection to
+
+    angular.module('yourapp', ['scania.angular.ui']);
