@@ -1,6 +1,4 @@
-# scania-angular-ui
-
-[![Join the chat at https://gitter.im/scania-bootstrap/scania-angular-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/scania-bootstrap/scania-angular-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# scania-angular-ui [![Join the chat at https://gitter.im/scania-bootstrap/scania-angular-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/scania-bootstrap/scania-angular-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This repository contains all Scania extensions, you can either download it or download extensions you like to use separately.
 
