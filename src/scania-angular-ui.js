@@ -9,7 +9,7 @@
 (function () {
     'use strict';
 
-    angular.module('scania.angular.ui', ['scania.angular.lightbox']);
+    angular.module('scania.angular.ui', ['scania.angular.lightbox', 'scania.angular.select2']);
 
     /**
      * @ngdoc module
@@ -18,16 +18,20 @@
      * @description
      * Scania lightbox module
      */
-    angular.module('scania.angular.lightbox', [])
+    angular.module('scania.angular.lightbox', ['flow']).directive('scLightbox', ['$animate', '$modal', scLightbox]);
     /**
+     /**
      * @ngdoc directive
      * @name scLightbox
      * @module scania.angular.lightbox
      *
      * @description file upload and gallery extension on angularJs framework
+     * @param $animate
+     * @param $modal
+     * @returns {{restrict: string, templateUrl: string, controllerAs: string, controller: Function}}
      */
 
-        .directive('scLightbox', ['$animate','$modal', function($animate, $modal){
+    function scLightbox($animate, $modal) {
 
             return {
             restrict: 'AEC',
@@ -71,7 +75,7 @@
                 };
             }
         };
-    }]);
+    }
 
     /**
      * @ngdoc module
@@ -80,16 +84,19 @@
      * @description
      * Scania select2 directive module
      */
-    angular.module('scania.angular.select2', [])
+    angular.module('scania.angular.select2', []).directive('scSelect2', ['$compile', '$timeout', scSelect2]);
+
     /**
      * @ngdoc directive
      * @name scLightbox
      * @module scania.angular.select2
      *
      * @description AngularJS directive for Select2
+     * @param $compile
+     * @param $timeout
+     * @returns {{restrict: string, scope: {ngModel: string, templateSelection: string, templateResult: string}, link: Function}}
      */
-
-        .directive('scSelect2', ['$compile','$timeout', function($compile, $timeout){
+    function scSelect2($compile, $timeout) {
 
             return {
                 restrict: 'A',
@@ -150,5 +157,5 @@
             function startsWith(str, target) {
                 return str.indexOf(target) === 0;
             }
-        }]);
+        }
 })();
