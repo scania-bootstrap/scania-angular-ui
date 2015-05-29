@@ -2,7 +2,7 @@
 
 This repository contains all Scania extensions, you can either download it or download extensions you like to use separately.
 
-Scania angular-ui is a set of native AngularJS extensions including a for file upload and gallery on AngularJs framework and a selection box with support for searching, tagging, ng-model, ng-repeat, native HTML select and option tags.
+Scania-angular-ui is a set of native AngularJS extensions including a for file upload and gallery on AngularJs framework and a selection box with support for searching, tagging, ng-model, ng-repeat, native HTML select and option tags.
 
 ###<a href="http://embed.plnkr.co/PlVBJeLgy5CgqED6rzQq/preview">Demo file upload</a>
 ###<a href="http://embed.plnkr.co/PlVBJeLgy5CgqED6rzQq/preview">Demo lightbox</a>
