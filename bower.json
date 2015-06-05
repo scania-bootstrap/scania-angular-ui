@@ -36,7 +36,10 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "karma.conf.js",
+    "npm-debug.log",
+    "package.json"
   ],
   "repository": {
     "type": "git",
