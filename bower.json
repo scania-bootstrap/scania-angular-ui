@@ -1,6 +1,6 @@
 {
   "name": "scania-angular-ui",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A set of native AngularJS extensions. A file upload and gallery extension on angularJs framework. A selection box with support for searching, tagging, ng-model, ng-repeat, native HTML select and option tags",
   "main": [
     "src/scania-angular-ui.js",

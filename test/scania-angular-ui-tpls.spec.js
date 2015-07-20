@@ -39,7 +39,7 @@ describe('scania-angular-ui-tpls directive', function () {
             }
         };
 
-        spyOn($modal, 'open').andReturn(modalInstance);
+        spyOn($modal, 'open').and.returnValue(modalInstance);
         flow = {files:[{image:'image1'},{image:'image2'}]};
     }));
 
@@ -60,7 +60,7 @@ describe('scania-angular-ui-tpls directive', function () {
         var lightbox = element.controller('scLightbox');
         lightbox.flow = flow;
 
-        spyOn(lightbox, 'open').andCallThrough();
+        spyOn(lightbox, 'open').and.callThrough();
 
         lightbox.open(1);
         expect($modal.open).toHaveBeenCalled();
@@ -99,7 +99,7 @@ describe('scania-angular-ui-tpls directive', function () {
 
         lightbox.open(1);
 
-        spyOn(lightbox, 'deleteImage').andCallFake(function(){
+        spyOn(lightbox, 'deleteImage').and.callFake(function(){
             return lightbox.flow.files.shift();
         }, lightbox);
 
