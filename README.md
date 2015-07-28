@@ -57,3 +57,19 @@ A complete example can be found on respective extension.
 For the full version just change the dependency injection to
 
     angular.module('yourapp', ['scania.angular.ui']);
+
+
+# Contributions
+
+
+If you want to contribute, please:
+
+	* Fork the project.
+	* Run test (karma start karma.config.js)
+	* Make your feature addition or bug fix and test it.
+	* Run test to make sure you haven't break anything.
+	* Send me a pull request on Github.
+
+## License
+
+scania-angular-ui is released under the [MIT License](http://www.opensource.org/licenses/MIT).
