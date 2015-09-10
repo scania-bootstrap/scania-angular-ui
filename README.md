@@ -20,7 +20,7 @@ The ```-tpls``` file contains the templates bundled in JavaScript, include it if
         <a href="http://flowjs.github.io/ng-flow/">flow/ng-flow</a><br/>
         <a href="https://angular-ui.github.io/bootstrap/">UI Bootstrap</a><br/>
         <a href="https://github.com/ivaynberg/select2">Select2 V3.5.2</a><br/>
-        <a href="https://github.com/ivaynberg/select2">select2-bootstrap-css V1.4.6</a><br/>
+        <a href="https://github.com/t0m/select2-bootstrap-css/tree/bootstrap3">select2-bootstrap-css V1.4.6</a><br/>
         <a href="https://github.com/jashkenas/underscore">Underscore</a><br/>
         <a href="http://jquery.com/">JQuery</a><br/>
 
