@@ -117,9 +117,10 @@
 
                 var selectorName = $attr.multiple ? 'multiselect' : 'select';
                 var select = $('select.sc-' + selectorName + '[id="' + $attr.id + '"]');
-                select.select2(options);
 
                 $timeout(function () {
+                    select.select2(options);
+
                     if (!$scope.ngModel) return;
 
                     //True for both single and multiselect
