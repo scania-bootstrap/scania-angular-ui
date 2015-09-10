@@ -51,7 +51,8 @@
     "angular-bootstrap": "0.12.1",
     "flow.js": "2.9.0",
     "ng-flow": "~2",
-      "select2": "3.5.2"
+    "select2": "3.5.2",
+    "select2-bootstrap.css": "1.4.6"
 
   },
   "devDependencies": {
@@ -59,8 +60,9 @@
     "angular-bootstrap": "0.12.1",
     "flow.js": "2.9.0",
     "ng-flow": "~2",
-      "select2": "3.5.2",
-      "underscore": "~1.7.0"
+    "select2": "3.5.2",
+    "underscore": "~1.7.0"
+    "select2-bootstrap.css": "1.4.6"
   },
     "resolutions": {
         "select2": "3.5.2"
