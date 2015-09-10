@@ -15,14 +15,14 @@ The ```-tpls``` file contains the templates bundled in JavaScript, include it if
 
 ##Requirements
 
-        <a href="http://getbootstrap.com/">Bootstrap</a><br/>
-        <a href="https://angularjs.org/">Angular animate</a><br/>
-        <a href="http://flowjs.github.io/ng-flow/">flow/ng-flow</a><br/>
-        <a href="https://angular-ui.github.io/bootstrap/">UI Bootstrap</a><br/>
-        <a href="https://github.com/ivaynberg/select2">Select2 V3.5.2</a><br/>
-        <a href="https://github.com/t0m/select2-bootstrap-css/tree/bootstrap3">select2-bootstrap-css V1.4.6</a><br/>
-        <a href="https://github.com/jashkenas/underscore">Underscore</a><br/>
-        <a href="http://jquery.com/">JQuery</a><br/>
+<a href="http://getbootstrap.com/">Bootstrap</a><br/>
+<a href="https://angularjs.org/">Angular animate</a><br/>
+<a href="http://flowjs.github.io/ng-flow/">flow/ng-flow</a><br/>
+<a href="https://angular-ui.github.io/bootstrap/">UI Bootstrap</a><br/>
+<a href="https://github.com/ivaynberg/select2">Select2 V3.5.2</a><br/>
+<a href="https://github.com/t0m/select2-bootstrap-css/tree/bootstrap3">select2-bootstrap-css V1.4.6</a><br/>
+<a href="https://github.com/jashkenas/underscore">Underscore</a><br/>
+<a href="http://jquery.com/">JQuery</a><br/>
 
 ## Installation
 
@@ -34,7 +34,7 @@ Add the following script to your index.html file and you are good to go :<br/>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="https://static.scania.com/development/global/css/scania-bootstrap.css" rel="stylesheet" type="text/css">
-     <link rel="stylesheet" href="bower_components/select2/select2.css"/><br/>
+    <link rel="stylesheet" href="bower_components/select2/select2.css"/><br/>
     <link href="bower_components/select2-bootstrap-css/select2-bootstrap.min.css"  rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
