@@ -19,7 +19,6 @@
             {pattern: 'bower_components/select2/select2.min.js', watched: false, include: true, served: true},
             {pattern: 'bower_components/flow.js/dist/flow.js', watched: false, include: true, served: true},
             {pattern: 'bower_components/ng-flow/dist/ng-flow.js', watched: false, include: true, served: true},
-            {pattern: 'bower_components/scania-angular-ui/src/scania-angular-ui-tpls.js', watched: false, include: true, served: true},
             {pattern: 'src/scania-angular-ui.js', watched: true, include: true},
             {pattern: 'src/scania-angular-ui-tpls.js', watched: true, include: true},
             {pattern: 'test/**/*.spec.js', watched: true, include: true}

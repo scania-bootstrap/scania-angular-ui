@@ -1,4 +1,4 @@
-describe('scania-angular-ui-tpls directive', function () {
+describe('scania-angular-ui directive', function () {
 
     'use strict';
 
@@ -6,7 +6,7 @@ describe('scania-angular-ui-tpls directive', function () {
 
     beforeEach(module('ui.bootstrap.transition'));
     beforeEach(module('ui.bootstrap'));
-    beforeEach(module('scania.angular.ui.tpls'));
+    beforeEach(module('scania.angular.ui'));
 
     beforeEach(inject(function (_$rootScope_, _$compile_, $controller, _$modal_) {
         $scope = _$rootScope_.$new();
