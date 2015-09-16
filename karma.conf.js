@@ -13,7 +13,7 @@
             {pattern: 'bower_components/angular/angular.js', watched: false, include: true},
             {pattern: 'bower_components/angular-mocks/angular-mocks.js', watched: false, include: true},
             {pattern: 'bower_components/angular-animate/angular-animate.js', watched: false, include: true},
-            {pattern: 'bower_components/angular-bootstrap/ui-bootstrap.js', watched: false, include: true},
+            {pattern: 'bower_components/angular-bootstrap/ui-bootstrap-custom-tpls-0.13.4.min.js', watched: false, include: true},
             {pattern: 'node_modules/underscore/underscore.js', watched: false, include: true},
             {pattern: 'bower_components/jquery/dist/jquery.js', watched: false, include: true},
             {pattern: 'bower_components/select2/select2.min.js', watched: false, include: true, served: true},

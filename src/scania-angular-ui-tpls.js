@@ -37,8 +37,8 @@
             "<div flow-init=\"\" class=\"lightbox\">\n" +
             "   <div class=\"modal-header\">\n" +
             "       <div class=\"pull-right\">\n" +
-            "           <a ng-click=\"lightbox.deleteImage()\"><i class=\"text-muted icon-trash icon-2x type--padding-right\"></i></a>\n" +
-            "           <a ng-click=\"lightbox.modalInstance.dismiss('cancel')\"><i class=\"text-muted icon-remove-sign icon-2x\"></i></a>\n" +
+            "           <a ng-click=\"lightbox.deleteImage()\"><i class=\"text-muted icon-trash fa-2x icon-2x \"></i></a>\n" +
+            "           <a ng-click=\"lightbox.modalInstance.dismiss('cancel')\"><i class=\"text-muted icon-remove-sign fa-2x icon-2x\"></i></a>\n" +
             "       </div>\n" +
             "   </div>\n" +
             "   <div class=\"modal-body\">\n" +

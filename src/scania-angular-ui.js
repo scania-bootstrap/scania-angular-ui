@@ -18,7 +18,7 @@
      * @description
      * Scania lightbox module
      */
-    angular.module('scania.angular.lightbox', ['flow']).directive('scLightbox', ['$animate', '$modal', scLightbox]);
+    angular.module('scania.angular.lightbox', ['flow', 'ui.bootstrap']).directive('scLightbox', ['$scmodal', scLightbox]);
     /**
      /**
      * @ngdoc directive
@@ -31,7 +31,7 @@
      * @returns {{restrict: string, templateUrl: string, controllerAs: string, controller: Function}}
      */
 
-    function scLightbox($animate, $modal) {
+    function scLightbox($scmodal) {
 
         return {
             restrict: 'AEC',
@@ -47,7 +47,7 @@
                     $scope.slides[index].active = true;
                     self.activeImage = $scope.slides[index];
 
-                    self.modalInstance = $modal.open({
+                    self.modalInstance = $scmodal.open({
                         animation: $attrs.animation,
                         templateUrl: 'template/scania-angular-lightbox.html',
                         size: $attrs.size,
@@ -114,13 +114,22 @@
                 });
                 options.formatSelection = $scope.templateSelection || $.fn.select2.defaults.formatSelection;
                 options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
-
                 var selectorName = $attr.multiple ? 'multiselect' : 'select';
                 var select = $('select.sc-' + selectorName + '[id="' + $attr.id + '"]');
 
+
+
                 $timeout(function () {
                     select.select2(options);
+                    updateSelectedItemsOnDisplay();
 
+                    $scope.$watch( 'ngModel', function() {
+                        updateSelectedItemsOnDisplay();
+                    });
+                });
+
+                // Access ngModel, $attr.multiple, select, options.value,
+                function updateSelectedItemsOnDisplay() {
                     if (!$scope.ngModel) return;
 
                     //True for both single and multiselect
@@ -129,33 +138,31 @@
                             //Multi select can have 1 or several default selected options,use each to initialize the select
                             //Single select has 1 default selected option, no iteration is needed to initialize the select
                             var selectedItems = $attr.multiple ? response.data : new Array(response.data);
-                            populatePreselectedOptions(select, selectedItems);
+                            populatePreselectedOptions(select, selectedItems, options.value);
                         });
                     }
                     else {
-                        if (!_.isArray($scope.ngModel) && !_.isObject($scope.ngModel)) throw "" + $scope.ngModel + " in " + $attr.id + " is not an object nor an array. Select2 must bind to an object or an array.";
+                        if (!_.isArray($scope.ngModel) && !_.isObject($scope.ngModel)) return;
                         var selectedItems = _.isArray($scope.ngModel) ? $scope.ngModel : new Array($scope.ngModel);
-                        populatePreselectedOptions(select, selectedItems);
+                        populatePreselectedOptions(select, selectedItems, options.value);
                     }
+                };
 
-                });
-
-                options.placeholderOption = $attr.multiple ? '' : 'first';
-
-                function populatePreselectedOptions(scSelect, selectedItems) {
-                    var selectedOptions = [];
-                    _.each(selectedItems, function (selectedItem) {
-                        var selectedId = selectedItem[options.value];
-                        var selectedOption = _.find(scSelect[0], function (option) {
-                            return selectedId == option.value;
-                        });
-                        selectedOptions.push({id: selectedId, text: selectedOption.label});
-                    });
-                    if (selectedItems.length == 1) selectedOptions = selectedOptions.pop();
-                    scSelect.select2('data', selectedOptions);
-                }
             }
         };
+
+        function populatePreselectedOptions(scSelect, selectedItems, key) {
+            var selectedOptions = [];
+            _.each(selectedItems, function (selectedItem) {
+                var selectedId = selectedItem[key];
+                var selectedOption = _.find(scSelect[0], function (option) {
+                    return selectedId == option.value;
+                });
+                selectedOptions.push({id: selectedId, text: selectedOption.label});
+            });
+            if (selectedItems.length == 1) selectedOptions = selectedOptions.pop();
+            scSelect.select2('data', selectedOptions);
+        }
 
         function startsWith(str, target) {
             return str.indexOf(target) === 0;
