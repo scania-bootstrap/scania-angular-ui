@@ -35,6 +35,7 @@ Add the following script to your index.html file and you are good to go :<br/>
         or
     <link href="bower_components/scania-bootstrap-ui/css/scania-bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css"  href="/bower_components/scania-angular-ui/src/ui-bootstrap/ui-bootstrap-custom-0.13.4-csp.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/scania-angular-ui/css/scania-angular-ui.css" >
     <link rel="stylesheet" href="bower_components/select2/select2.css"/><br/>
     <link href="bower_components/select2-bootstrap-css/select2-bootstrap.min.css"  rel="stylesheet" type="text/css">
 

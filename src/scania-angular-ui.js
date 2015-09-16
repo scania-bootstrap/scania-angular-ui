@@ -26,8 +26,7 @@
      * @module scania.angular.lightbox
      *
      * @description file upload and gallery extension on angularJs framework
-     * @param $animate
-     * @param $modal
+     * @param $scmodal
      * @returns {{restrict: string, templateUrl: string, controllerAs: string, controller: Function}}
      */
 
