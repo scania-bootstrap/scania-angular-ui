@@ -1,14 +1,14 @@
 {
   "name": "scania-angular-ui",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "A set of native AngularJS extensions. A file upload and gallery extension on angularJs framework. A selection box with support for searching, tagging, ng-model, ng-repeat, native HTML select and option tags",
   "main": [
     "src/scania-angular-ui.js",
     "src/scania-angular-ui-tpls.js",
     "less/scania-angular-ui.less",
-      "less/select2.png",
-      "less/select2x2.png",
-      "less/select2-spinner.gif"
+    "less/select2.png",
+    "less/select2x2.png",
+    "less/select2-spinner.gif"
   ],
   "keywords": [
     "scania-angular-lightbox",
@@ -20,11 +20,11 @@
     "ng-flow",
     "ng-gallery",
     "lightbox",
-      "scania-angular-select2",
-      "sc-select2",
-      "angular-select2",
-      "select2",
-      "angular-select"
+    "scania-angular-select2",
+    "sc-select2",
+    "angular-select2",
+    "select2",
+    "angular-select"
   ],
   "authors": [
     "Scania",
@@ -52,7 +52,6 @@
     "ng-flow": "~2",
     "select2": "3.5.2",
     "select2-bootstrap-css": "1.4.6"
-
   },
   "devDependencies": {
     "bootstrap": "3.3.4",
@@ -62,8 +61,8 @@
     "underscore": "~1.7.0",
     "select2-bootstrap-css": "1.4.6"
   },
-    "resolutions": {
-        "select2": "3.5.2"
-    },
+  "resolutions": {
+    "select2": "3.5.2"
+  },
   "homepage": "https://github.com/scania-bootstrap/scania-angular-ui"
 }
