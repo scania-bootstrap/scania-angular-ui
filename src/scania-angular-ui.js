@@ -113,12 +113,13 @@
                 });
                 options.formatSelection = $scope.templateSelection || $.fn.select2.defaults.formatSelection;
                 options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
-                var selectorName = $attr.multiple ? 'multiselect' : 'select';
-                var select = $('select.sc-' + selectorName + '[id="' + $attr.id + '"]');
+                var selectorName = $attr.multiple ? 'multiselect' : 'select',
+                    select = {};
 
 
 
                 $timeout(function () {
+                    select = $('select.sc-' + selectorName + '[id="' + $attr.id + '"]');
                     select.select2(options);
                     updateSelectedItemsOnDisplay();
 
@@ -157,7 +158,12 @@
                 var selectedOption = _.find(scSelect[0], function (option) {
                     return selectedId == option.value;
                 });
+                if(!selectedOption) {
+                    console.error("Data-value for " + scSelect[0].id +" must have the same value as its track by.");
+                    return;
+                }
                 selectedOptions.push({id: selectedId, text: selectedOption.label});
+
             });
             if (selectedItems.length == 1) selectedOptions = selectedOptions.pop();
             scSelect.select2('data', selectedOptions);
