@@ -101,7 +101,8 @@
             scope: {
                 ngModel: '=',
                 templateSelection: '=',
-                templateResult: '='
+                templateResult: '=',
+                matcher: '='
             },
             link: function ($scope, element, $attr) {
                 if ($attr.language) {
@@ -113,10 +114,9 @@
                 });
                 options.formatSelection = $scope.templateSelection || $.fn.select2.defaults.formatSelection;
                 options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
+                options.matcher = $scope.matcher || $.fn.select2.defaults.matcher;
                 var selectorName = $attr.multiple ? 'multiselect' : 'select',
                     select = {};
-
-
 
                 $timeout(function () {
                     select = $('select.sc-' + selectorName + '[id="' + $attr.id + '"]');
@@ -152,6 +152,7 @@
         };
 
         function populatePreselectedOptions(scSelect, selectedItems, key) {
+            //throw "Data-value for " + scSelect[0].id +" must have the same value as its track by.";
             var selectedOptions = [];
             _.each(selectedItems, function (selectedItem) {
                 var selectedId = selectedItem[key];
