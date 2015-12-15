@@ -115,6 +115,8 @@
                 options.formatSelection = $scope.templateSelection || $.fn.select2.defaults.formatSelection;
                 options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
                 options.matcher = $scope.matcher || $.fn.select2.defaults.matcher;
+                options.minimumResultsForSearch = (options.minimumResultsForSearch > 10) ? options.minimumResultsForSearch : 10;
+
                 var selectorName = $attr.multiple ? 'multiselect' : 'select',
                     select = {};
 
