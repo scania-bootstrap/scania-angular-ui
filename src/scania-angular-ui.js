@@ -118,7 +118,8 @@
                 options.minimumResultsForSearch = (options.minimumResultsForSearch > 10) ? options.minimumResultsForSearch : 10;
 
                 var selectorName = $attr.multiple ? 'multiselect' : 'select',
-                    select = {};
+                    select = {},
+                    events = 'input keyup';
 
                 $timeout(function () {
                     select = $('select.sc-' + selectorName + '[id="' + $attr.id + '"]');
@@ -128,6 +129,7 @@
                     $scope.$watch( 'ngModel', function() {
                         updateSelectedItemsOnDisplay();
                     });
+                    registerSearchInputEvents();
                 });
 
                 // Access ngModel, $attr.multiple, select, options.value,
@@ -148,7 +150,16 @@
                         var selectedItems = _.isArray($scope.ngModel) ? $scope.ngModel : new Array($scope.ngModel);
                         populatePreselectedOptions(select, selectedItems, options.value);
                     }
-                };
+                }
+
+                function registerSearchInputEvents() {
+                    $('.select2-input').bind(events, function (event) {
+                        var minimumInputLength = (options.minimumInputLength) ? options.minimumInputLength : 3;
+                        if (event.currentTarget.value.length >= minimumInputLength) {
+                            $scope.$emit('select.search-input', event.currentTarget.value);
+                        }
+                    });
+                }
 
             }
         };
