@@ -102,7 +102,9 @@
                 ngModel: '=',
                 templateSelection: '=',
                 templateResult: '=',
-                matcher: '='
+                matcher: '=',
+                createSearchChoice: '=',
+                tokenSeparators: '='
             },
             link: function ($scope, element, $attr) {
                 if ($attr.language) {
@@ -110,20 +112,30 @@
                     $(element).append($compile(domElem)($scope));
                 }
                 var options = _.pick($(element).data(), function (value, key) {
-                    return !startsWith(key, '$');
-                });
+                        return !startsWith(key, '$');
+                    }),
+                    selectorName = $attr.multiple ? 'multiselect' : 'select',
+                    select = {},
+                    minimumResultsForSearch = 10,
+                    tag = 'select',
+                    tokenSeparators =  [",", " "],
+                    events = 'input keyup';
+
                 options.formatSelection = $scope.templateSelection || $.fn.select2.defaults.formatSelection;
                 options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
                 options.matcher = $scope.matcher || $.fn.select2.defaults.matcher;
-                options.minimumResultsForSearch = (options.minimumResultsForSearch > 10) ? options.minimumResultsForSearch : 10;
-
-                var selectorName = $attr.multiple ? 'multiselect' : 'select',
-                    select = {},
-                    events = 'input keyup';
+                options.minimumResultsForSearch = (options.minimumResultsForSearch > 10) ? options.minimumResultsForSearch : minimumResultsForSearch;
 
                 $timeout(function () {
-                    select = $('select.sc-' + selectorName + '[id="' + $attr.id + '"]');
+                    if($(element).is('input')){
+                        tag = 'input';
+                        options.data = { results: JSON.parse($attr.data), text: $attr.label };
+                        options.createSearchChoice = $scope.createSearchChoice;
+                        options.tokenSeparators = $scope.tokenSeparators || tokenSeparators;
+                    }
+                    select = $(tag + '.sc-' + selectorName + '[id="' + $attr.id + '"]');
                     select.select2(options);
+
                     updateSelectedItemsOnDisplay();
 
                     $scope.$watch( 'ngModel', function() {
