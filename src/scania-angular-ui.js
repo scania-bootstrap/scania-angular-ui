@@ -137,7 +137,6 @@
                     select.select2(options);
 
                     updateSelectedItemsOnDisplay();
-
                     $scope.$watch( 'ngModel', function() {
                         updateSelectedItemsOnDisplay();
                     });
