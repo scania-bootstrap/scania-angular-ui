@@ -179,7 +179,8 @@
                     minimumResultsForSearch = 10,
                     tag = 'select',
                     tokenSeparators =  [",", " "],
-                    events = 'input keyup';
+                    events = 'input keyup',
+                    inputOptionsLabelProperty = '';
 
                 options.formatSelection = $scope.templateSelection || $.fn.select2.defaults.formatSelection;
                 options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
@@ -192,6 +193,7 @@
                         options.data = { results: JSON.parse($attr.data), text: $attr.label };
                         options.createSearchChoice = $scope.createSearchChoice;
                         options.tokenSeparators = $scope.tokenSeparators || tokenSeparators;
+                        inputOptionsLabelProperty = option.label;
                     }
                     select = $(tag + '.sc-' + selectorName + '[id="' + $attr.id + '"]');
                     select.select2(options);
@@ -213,13 +215,21 @@
                             //Multi select can have 1 or several default selected options,use each to initialize the select
                             //Single select has 1 default selected option, no iteration is needed to initialize the select
                             var selectedItems = $attr.multiple ? response.data : new Array(response.data);
-                            populatePreselectedOptions(select, selectedItems, options.value);
+                            if($(element).is('input')){
+                                populatePreselectedInputOptions(select, selectedItems, options.id, inputOptionsLabelProperty);
+                            }else {
+                                populatePreselectedOptions(select, selectedItems, options.value);
+                            }
                         });
                     }
                     else {
                         if (!_.isArray($scope.ngModel) && !_.isObject($scope.ngModel)) return;
                         var selectedItems = _.isArray($scope.ngModel) ? $scope.ngModel : new Array($scope.ngModel);
-                        populatePreselectedOptions(select, selectedItems, options.value);
+                        if($(element).is('input')){
+                            populatePreselectedInputOptions(select, selectedItems, options.id, inputOptionsLabelProperty);
+                        }else {
+                            populatePreselectedOptions(select, selectedItems, options.value);
+                        }
                     }
                 }
                 function registerSearchInputEvents() {
@@ -253,6 +263,17 @@
             scSelect.select2('data', selectedOptions);
         }
 
+        function populatePreselectedInputOptions(scSelect, selectedItems, key, inputOptionsLabelProperty) {
+            var selectedOptions = [];
+            _.each(selectedItems, function(selectedItem){
+                var option = {};
+                option[key] = selectedItem[key];
+                option[inputOptionsLabelProperty] = selectedItem[inputOptionsLabelProperty];
+                selectedOptions.push(option);
+            });
+            if (selectedItems.length == 1) selectedOptions = selectedOptions.pop();
+            scSelect.select2('data', selectedOptions);
+        }
         function startsWith(str, target) {
             return str.indexOf(target) === 0;
         }
