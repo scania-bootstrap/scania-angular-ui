@@ -193,7 +193,7 @@
                         options.data = { results: JSON.parse($attr.data), text: $attr.label };
                         options.createSearchChoice = $scope.createSearchChoice;
                         options.tokenSeparators = $scope.tokenSeparators || tokenSeparators;
-                        inputOptionsLabelProperty = option.label;
+                        inputOptionsLabelProperty = options.label;
                     }
                     select = $(tag + '.sc-' + selectorName + '[id="' + $attr.id + '"]');
                     select.select2(options);
