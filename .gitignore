@@ -4,4 +4,3 @@ test/
 tests/
 karma.conf.js
 npm-debug.log
-package.json
