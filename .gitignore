@@ -2,5 +2,6 @@ node_modules/
 bower_components/
 test/
 tests/
+.idea/
 karma.conf.js
 npm-debug.log
