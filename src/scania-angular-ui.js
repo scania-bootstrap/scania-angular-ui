@@ -195,7 +195,7 @@
             var domElem = '<script src="/bower_components/select2/select2_locale_' + $attr.language + '.js" async defer></script>';
             $(element).append($compile(domElem)($scope));
         }
-        var options = _.pick($(element).data(), function (value, key) {
+        var options = _.pickBy($(element).data(), function (value, key) {
                 return !startsWith(key, '$');
             }),
             minimumResultsForSearch = 10,
