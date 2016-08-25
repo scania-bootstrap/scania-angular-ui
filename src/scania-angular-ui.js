@@ -199,12 +199,15 @@
                 return !startsWith(key, '$');
             }),
             minimumResultsForSearch = 10,
+            defaultWidth = '100%',
             events = 'input keyup';
 
         options.formatSelection = $scope.templateSelection || $.fn.select2.defaults.formatSelection;
         options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
         options.matcher = $scope.matcher || $.fn.select2.defaults.matcher;
         options.minimumResultsForSearch = (options.minimumResultsForSearch > 10) ? options.minimumResultsForSearch : minimumResultsForSearch;
+        var width =  ($(element).innerWidth() > 49)? $(element).css('width') : defaultWidth;
+        $(element).attr('style', 'width:' + width);
 
         $('.select2-input').bind(events, function (event) {
             var minimumInputLength = (options.minimumInputLength) ? options.minimumInputLength : 3;
