@@ -206,9 +206,9 @@
         options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
         options.matcher = $scope.matcher || $.fn.select2.defaults.matcher;
         options.minimumResultsForSearch = (options.minimumResultsForSearch > 10) ? options.minimumResultsForSearch : minimumResultsForSearch;
-        var width =  ($(element).innerWidth() > 49)? $(element).css('width') : defaultWidth;
-        $(element).attr('style', 'width:' + width);
-
+        if ($(element).innerWidth() < 49) {
+            $(element).attr('style', 'width: ' + defaultWidth);
+        }
         $('.select2-input').bind(events, function (event) {
             var minimumInputLength = (options.minimumInputLength) ? options.minimumInputLength : 3;
             if (event.currentTarget.value.length >= minimumInputLength) {
