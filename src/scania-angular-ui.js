@@ -206,7 +206,7 @@
         options.formatResult = $scope.templateResult || $.fn.select2.defaults.formatResult;
         options.matcher = $scope.matcher || $.fn.select2.defaults.matcher;
         options.minimumResultsForSearch = (options.minimumResultsForSearch > 10) ? options.minimumResultsForSearch : minimumResultsForSearch;
-        if ($(element).innerWidth() < 49) {
+        if ($(element).innerWidth() < 49 || !_.includes($(element).attr('style'), 'width')) {
             $(element).attr('style', 'width: ' + defaultWidth);
         }
         $('.select2-input').bind(events, function (event) {
