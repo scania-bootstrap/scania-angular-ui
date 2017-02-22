@@ -321,8 +321,8 @@
             $scope.$watch('ngModel', function () {
                 updateSelectedItemsOnDisplay($scope, select, options);
             });
+            registerEvents($scope, scSelect);
         });
-        registerEvents($scope, scSelect);
     }
     /**
      * @ngdoc method
