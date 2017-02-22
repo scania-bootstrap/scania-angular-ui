@@ -310,16 +310,62 @@
      */
     function createSelect($scope, element, $attr, $compile, $timeout) {
         var options = init($scope, element, $attr, $compile),
-            select = {};
+            select = {},
+            scSelect;
 
         $timeout(function () {
             select = $('select[id="' + $attr.id + '"]');
-            select.select2(options);
+            scSelect = select.select2(options);
 
             updateSelectedItemsOnDisplay($scope, select, options);
             $scope.$watch('ngModel', function () {
                 updateSelectedItemsOnDisplay($scope, select, options);
             });
+        });
+        registerEvents($scope, scSelect);
+    }
+    /**
+     * @ngdoc method
+     * @name scania.angular.select2#registerEvents
+     * @methodOf scania.angular.select2
+     *
+     * @description
+     * Register select2 events
+     *
+     */
+    function registerEvents($scope, scSelect) {
+        scSelect.on('select2-closing', function(event) {
+            $scope.$emit('select.closing', event);
+        });
+        scSelect.on('select2-close', function(event) {
+            $scope.$emit('select.close', event);
+        });
+        scSelect.on('select2-opening', function(event) {
+            $scope.$emit('select.opening', event);
+        });
+        scSelect.on('select2-open', function(event) {
+            $scope.$emit('select.open', event);
+        });
+        scSelect.on('select2-selecting', function(event) {
+            $scope.$emit('select.selecting', event);
+        });
+        scSelect.on('select2-selected', function(event) {
+            $scope.$emit('select.selected', event);
+        });
+        scSelect.on('select2-unselecting', function(event) {
+            $scope.$emit('select.unselecting', event);
+        });
+        scSelect.on('select2-unselect', function(event) {
+            $scope.$emit('select.unselect', event);
+        });
+        scSelect.on('select2-clearing', function(event) {
+            $scope.$emit('select.clearing', event);
+        });
+        scSelect.on('select2-removing', function(event) {
+            $scope.$emit('select.removing', event);
+        });
+        scSelect.on('select2-focus select2-blur', function(event) {
+            $scope.$emit('select.focus', event);
         });
     }
     /**
