@@ -321,7 +321,7 @@
             $scope.$watch('ngModel', function () {
                 updateSelectedItemsOnDisplay($scope, select, options);
             });
-            registerEvents($scope, scSelect);
+            registerEvents($scope, scSelect, options);
         });
     }
     /**
@@ -333,7 +333,7 @@
      * Register select2 events
      *
      */
-    function registerEvents($scope, scSelect) {
+    function registerEvents($scope, scSelect, options) {
 
         scSelect.on('select2-closing', function(event) {
             if(angular.isDefined(options.preventClose)) {
