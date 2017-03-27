@@ -334,25 +334,38 @@
      *
      */
     function registerEvents($scope, scSelect) {
+
         scSelect.on('select2-closing', function(event) {
+            if(angular.isDefined(options.preventClose)) {
+                event.preventDefault();
+            }
             $scope.$emit('select.closing', event);
         });
         scSelect.on('select2-close', function(event) {
             $scope.$emit('select.close', event);
         });
         scSelect.on('select2-opening', function(event) {
+            if(angular.isDefined(options.preventOpen)) {
+                event.preventDefault();
+            }
             $scope.$emit('select.opening', event);
         });
         scSelect.on('select2-open', function(event) {
             $scope.$emit('select.open', event);
         });
         scSelect.on('select2-selecting', function(event) {
+            if(angular.isDefined(options.preventSelect)) {
+                event.preventDefault();
+            }
             $scope.$emit('select.selecting', event);
         });
         scSelect.on('select2-selected', function(event) {
             $scope.$emit('select.selected', event);
         });
         scSelect.on('select2-unselecting', function(event) {
+            if(angular.isDefined(options.preventUnselect)) {
+                event.preventDefault();
+            }
             $scope.$emit('select.unselecting', event);
         });
         scSelect.on('select2-unselect', function(event) {
@@ -366,6 +379,9 @@
         });
         scSelect.on('select2-focus select2-blur', function(event) {
             $scope.$emit('select.focus', event);
+        });
+        scSelect.on('change', function(event) {
+            $scope.$emit('select.change', event);
         });
     }
     /**
