@@ -318,7 +318,8 @@
             scSelect = select.select2(options);
 
             updateSelectedItemsOnDisplay($scope, select, options);
-            $scope.$watch('ngModel', function () {
+            $scope.watchFunction = _.isArray($scope.ngModel) ? $scope.$watchCollection : $scope.$watch;
+            $scope.watchFunction('ngModel', function () {
                 updateSelectedItemsOnDisplay($scope, select, options);
             });
             registerEvents($scope, scSelect, options);
