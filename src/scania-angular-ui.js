@@ -227,7 +227,10 @@
      *
      */
     function updateSelectedItemsOnDisplay($scope, select, options, inputOptionsLabelProperty, input) {
-        if (!$scope.ngModel) return;
+        if (!$scope.ngModel) {
+            select.select2("val", "");
+            return;
+        }
 
         //True for both single and multiselect
         if ($scope.ngModel.then && typeof $scope.ngModel.then === 'function') {
