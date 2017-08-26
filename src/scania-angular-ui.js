@@ -273,7 +273,7 @@
                 return selectedId == option.value;
             });
             if (!selectedOption) {
-                console.error("Data-value for " + scSelect[0].id + " must have the same value as its track by.");
+                console.error("Data-value for " + scSelect[0] + " must have the same value as its track by.");
                 return;
             }
             selectedOptions.push({id: selectedId, text: selectedOption.label});
