@@ -525,11 +525,13 @@
             phone: 'phone.detected',
             portraittablet: 'portrait.tablet.detected',
             landscapetablet: 'landscape.tablet.detected',
-            desktop: 'desktop.detected'
+            desktop: 'desktop.detected',
+            smdevice: 'sm.device.detected'
         }
         var service = {
             isDevice: _isDevice,
             isLargeDevice: _isLargeDevice,
+            isMediumDevice: _isSMDevice,
             events: _events
         }
 
@@ -543,6 +545,10 @@
             return _isLandscapeTablet() || _isDesktop() || _isLargeDesktop();
         }
 
+        function _isSMDevice() {
+            return _isMediumDevice() || _isPortraitTablet();
+        }
+
         function _emitDetectedDevice() {
             //4 break points including phones (portrait and landscape), tablets (portrait or landscape), laptops and desktop
             $rootScope.$emit(_events.phone, _isSmallPhone() || _isMediumDevice());
@@ -553,7 +559,7 @@
             //1 break point between mobile/tablet and desktop
             $rootScope.$emit(_events.device, _isDevice());
             $rootScope.$emit(_events.largedevice, _isLargeDevice());
-
+            $rootScope.$emit(_events.smdevice, _isSMDevice());
         }
 
         function _isSmallPhone() {
