@@ -6,10 +6,10 @@
     "src/scania-angular-ui.js",
      "css/corporate-ui-sc-select.css"
     "src/scania-angular-ui-tpls.js",
-    "less/scania-angular-ui.less",
-    "less/select2.png",
-    "less/select2x2.png",
-    "less/select2-spinner.gif"
+    "css/scania-angular-ui.less",
+    "css/select2.png",
+    "css/select2x2.png",
+    "css/select2-spinner.gif"
   ],
   "keywords": [
     "scania-angular-lightbox",
