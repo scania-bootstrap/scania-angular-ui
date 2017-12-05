@@ -34,7 +34,7 @@ Add the following script to your index.html file and you are good to go :<br/>
     
         
     
-    <link href="corporate-ui-sc-select.css"  rel="stylesheet" type="text/css">
+    <link href="/bower_components/scania-angular-ui/css/corporate-ui-sc-select.css"  rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css"  href="/bower_components/scania-angular-ui/src/ui-bootstrap/ui-bootstrap-custom-0.13.4-csp.css">
     <link rel="stylesheet" type="text/css" href="bower_components/scania-angular-ui/css/scania-angular-ui.css" >
     <link rel="stylesheet" href="bower_components/select2/select2.css"/><br/>
