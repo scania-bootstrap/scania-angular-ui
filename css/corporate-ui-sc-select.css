@@ -4,13 +4,12 @@
 }
 
 .select2-container.select2-container-disabled .select2-choice {
+    opacity: 0.3;
     background-color: #bcbcbc;
-    background-image: none;
-    border: 1px solid #a7a5a5;
-    cursor: default;
 }
 
 .select2-container.select2-container-disabled .select2-choice .select2-arrow {
+    opacity: 0.45;
     background-color: #bcbcbc;
     background-image: none;
     border-left: 0;
@@ -27,7 +26,6 @@
   background-color: #f5f5f5;
   background-image: none;
 }
-
 
 header.c-page-header .select2-container .select2-choice,
 header.c-page-header .compact .select2-container .select2-choice,
@@ -225,11 +223,10 @@ header.c-page-header .select2-container-multi .select2-choices .select2-search-f
   background-image: none;
 }
 
-/*.select2-container-active .select2-choice,
-.select2-container-active .select2-choices {
-    border: 4px solid red;
+.select2-container-active .select2-choice, .select2-container-active .select2-choices {
+    border: 1px solid rgb(74, 139, 164);
 }
-*/
+
 .select2-container .select2-choice abbr {
     right: 15%;
     top: 35%;
@@ -259,6 +256,7 @@ header.c-page-header .select2-container-multi .select2-choices .select2-search-c
 
 .select2-drop.select2-drop-above.select2-drop-active {
     border: none;
+    margin-top: -5px;
 }
 
 .select2-display-none {
@@ -277,3 +275,6 @@ table .select2-container .select2-choice .select2-arrow {
   width: 17%;
 }
 
+.select2-search > .scania-icon-search ~ input[type="text"] {
+  width: 80%;
+}
