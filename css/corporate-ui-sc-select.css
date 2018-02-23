@@ -173,7 +173,7 @@
   color: #999;
   -webkit-box-shadow: none;
   box-shadow: none;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 .app .select2-results {
   margin: 0px;
