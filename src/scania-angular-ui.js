@@ -213,7 +213,8 @@
             var minimumInputLength = (options.minimumInputLength) ? options.minimumInputLength : 3;
             if (event.currentTarget.value.length >= minimumInputLength) {
                 $scope.$emit('select.search-input', event.currentTarget.value);
-            }
+            } 
+            $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
         });
         return options;
     }
@@ -480,7 +481,7 @@
                     inputOptionsLabelProperty = '';
 
                 $timeout(function () {
-
+                    
                     options.data = {results: JSON.parse($attr.data), text: $attr.label};
                     options.createSearchChoice = $scope.createSearchChoice;
                     options.tokenSeparators = $scope.tokenSeparators || tokenSeparators;
@@ -494,6 +495,8 @@
                     $scope.$watch('ngModel', function () {
                         updateSelectedItemsOnDisplay($scope, select, options, inputOptionsLabelProperty, 'input');
                     });
+
+                    $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
                 });
             }
         };
