@@ -1,10 +1,10 @@
 {
   "name": "scania-angular-ui",
-  "version": "3.1.3",
+  "version": "3.1.2",
   "description": "A set of native AngularJS extensions. A file upload and gallery extension on angularJs framework. A selection box with support for searching, tagging, ng-model, ng-repeat, native HTML select and option tags",
   "main": [
     "src/scania-angular-ui.js",
-     "css/corporate-ui-sc-select.css"
+     "css/corporate-ui-sc-select.css",
     "src/scania-angular-ui-tpls.js",
     "css/scania-angular-ui.css",
     "images/select2.png",
@@ -21,6 +21,7 @@
     "ng-flow",
     "ng-gallery",
     "lightbox",
+    "scania-angular-select2",
     "sc-select2",
     "angular-select2",
     "select2",
