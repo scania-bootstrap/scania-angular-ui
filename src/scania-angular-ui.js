@@ -215,9 +215,9 @@
                 $scope.$emit('select.search-input', event.currentTarget.value);
             }
         });
+        $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
         return options;
     }
-        $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
 
     /**
      * @ngdoc method
