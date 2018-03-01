@@ -215,7 +215,7 @@
                 $scope.$emit('select.search-input', event.currentTarget.value);
             }
         });
-        $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
+        $('.select2-search').prepend('<i class="scania-icon-search sm"></i>');
         return options;
     }
 
@@ -482,7 +482,7 @@
                     inputOptionsLabelProperty = '';
 
                 $timeout(function () {
-                    $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
+                    $('.select2-search').prepend('<i class="scania-icon-search sm"></i>');
                     options.data = {results: JSON.parse($attr.data), text: $attr.label};
                     options.createSearchChoice = $scope.createSearchChoice;
                     options.tokenSeparators = $scope.tokenSeparators || tokenSeparators;
