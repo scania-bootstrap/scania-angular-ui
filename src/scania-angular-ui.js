@@ -260,6 +260,7 @@
     }
 
     function createContainer(options) {
+        debugger
         return $(document.createElement("div")).attr({ "class": options.class }).html(options.template);
     }
 
