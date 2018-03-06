@@ -195,6 +195,45 @@
             var domElem = '<script src="/bower_components/select2/select2_locale_' + $attr.language + '.js" async defer></script>';
             $(element).append($compile(domElem)($scope));
         }
+
+        Select2.class.single.prototype.createContainer = function() {
+            return createContainer({
+                class: "select2-container",
+                template: "\
+                    <a href='javascript:void(0)' class='select2-choice' tabindex='-1'>\
+                       <span class='select2-chosen'>&#160;</span><abbr class='select2-search-choice-close'></abbr>\
+                       <span class='select2-arrow' role='presentation'><b role='presentation'></b></span>\
+                    </a>\
+                    <label for='' class='select2-offscreen'></label>\
+                    <input class='select2-focusser select2-offscreen' type='text' aria-haspopup='true' role='button' />\
+                    <div class='select2-drop select2-display-none'>\
+                       <div class='select2-search'><i class='icon-search icon-large'></i>\
+                           <label for='' class='select2-offscreen'></label>\
+                           <input type='text' autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false' class='select2-input' role='combobox' aria-expanded='true'\
+                           aria-autocomplete='list' />\
+                       </div>\
+                       <ul class='select2-results' role='listbox'>\
+                       </ul>\
+                    </div>"
+            })
+        }
+        Select2.class.multi.prototype.createContainer = function() {
+            return createContainer({
+                class: "select2-container select2-container-multi",
+                template: "\
+                    <ul class='select2-choices'>\
+                      <li class='select2-search-field'>\
+                        <label for='' class='select2-offscreen'></label>\
+                        <input type='text' autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false' class='select2-input'>\
+                      </li>\
+                    </ul>\
+                    <div class='select2-drop select2-drop-multi select2-display-none'>\
+                       <ul class='select2-results'>\
+                       </ul>\
+                    </div>"
+            })
+        }
+
         var options = _.pickBy($(element).data(), function (value, key) {
                 return !startsWith(key, '$');
             }),
@@ -215,8 +254,12 @@
                 $scope.$emit('select.search-input', event.currentTarget.value);
             }
         });
-        $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
+        // $('.select2-search').prepend('<i class="scania-icon-search sm"></i>');
         return options;
+    }
+
+    function createContainer(options) {
+        return $(document.createElement("div")).attr({ "class": options.class }).html(options.template);
     }
 
     /**
@@ -482,7 +525,7 @@
                     inputOptionsLabelProperty = '';
 
                 $timeout(function () {
-                    $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
+                    // $('.select2-search').prepend('<i class="scania-icon-search sm"></i>');
                     options.data = {results: JSON.parse($attr.data), text: $attr.label};
                     options.createSearchChoice = $scope.createSearchChoice;
                     options.tokenSeparators = $scope.tokenSeparators || tokenSeparators;

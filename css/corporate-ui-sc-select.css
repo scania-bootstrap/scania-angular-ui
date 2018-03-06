@@ -118,6 +118,7 @@
     padding: 7px;
 }
 .select2-search input {
+  width: auto;
   min-height: 26px;
   margin: 0;
   border: none;
