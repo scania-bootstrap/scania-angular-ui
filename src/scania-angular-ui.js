@@ -197,6 +197,7 @@
         }
 
         Select2.class.single.prototype.createContainer = function() {
+            debugger
             return createContainer({
                 class: "select2-container",
                 template: "\
