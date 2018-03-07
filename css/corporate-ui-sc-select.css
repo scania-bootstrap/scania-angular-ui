@@ -205,12 +205,12 @@
 }
 
 .app .select2-container-multi .select2-choices {
-  height: 46px!important;
+  /*height: 46px!important;*/
   padding: 0 0 0 10px;
   line-height: 50px;
 }
 .compact .select2-container-multi .select2-choices {
-  height: 34px!important;
+  /*height: 34px!important;*/
   padding: 0 0 0 10px;
 }
 
