@@ -193,7 +193,7 @@
   color: #444;
 }
 .select2-container-multi .select2-choices {
-  height: 63px!important;
+  /*height: 63px!important;*/
   padding: 0 0 0 20px;
   margin: 0;
   position: relative;
