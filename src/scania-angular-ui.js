@@ -215,7 +215,6 @@
                 $scope.$emit('select.search-input', event.currentTarget.value);
             }
         });
-        $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
         return options;
     }
 
@@ -327,6 +326,7 @@
             $scope.watchFunction('ngModel', function () {
                 updateSelectedItemsOnDisplay($scope, select, options);
             });
+            $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
             registerEvents($scope, scSelect, options);
         });
     }
@@ -482,7 +482,6 @@
                     inputOptionsLabelProperty = '';
 
                 $timeout(function () {
-                    $('.select2-search', element).prepend('<i class="scania-icon-search sm"></i>');
                     options.data = {results: JSON.parse($attr.data), text: $attr.label};
                     options.createSearchChoice = $scope.createSearchChoice;
                     options.tokenSeparators = $scope.tokenSeparators || tokenSeparators;
@@ -491,6 +490,8 @@
 
                     select = $('input[id="' + $attr.id + '"]');
                     select.select2(options);
+
+                    $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
 
                     updateSelectedItemsOnDisplay($scope, select, options, inputOptionsLabelProperty, 'input');
                     $scope.$watch('ngModel', function () {
