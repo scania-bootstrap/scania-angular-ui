@@ -325,8 +325,8 @@
             $scope.watchFunction = _.isArray($scope.ngModel) ? $scope.$watchCollection : $scope.$watch;
             $scope.watchFunction('ngModel', function () {
                 updateSelectedItemsOnDisplay($scope, select, options);
-                $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
             });
+            $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
             registerEvents($scope, scSelect, options);
         });
     }
