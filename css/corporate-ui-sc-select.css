@@ -172,8 +172,14 @@
   color: #999;
   -webkit-box-shadow: none;
   box-shadow: none;
-  overflow: hidden;
+  -ms-overflow-style: none;
 }
+
+.select2-results::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 .app .select2-results {
   margin: 0px;
   padding: 0px;
