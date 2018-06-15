@@ -28,7 +28,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/scania-bootstrap/scania-angular-select2.git"
+    "url": "git://github.com/scania-bootstrap/scania-angular-ui.git"
   },
-  "homepage": "https://github.com/scania-bootstrap/scania-angular-select2"
+  "homepage": "https://github.com/scania-bootstrap/scania-angular-ui"
 }
