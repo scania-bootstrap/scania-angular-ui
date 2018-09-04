@@ -40,7 +40,7 @@
     padding: 0 0 0 20px;
     border: none;
     white-space: nowrap;
-    line-height: 62px;
+    line-height: 3.5;
     color: #444;
     border-radius: 0px;
     background: #f5f5f5;
@@ -50,7 +50,7 @@
 .app .select2-container .select2-choice {
   height: 42px;
   padding: 0 0 0 10px;
-  line-height: 40px;
+  line-height: 3;
   border: 1px solid transparent;
 }
 
