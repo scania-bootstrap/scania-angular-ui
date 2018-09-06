@@ -326,10 +326,8 @@
             $scope.watchFunction('ngModel', function () {
                 updateSelectedItemsOnDisplay($scope, select, options);
             });
+            $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
             registerEvents($scope, scSelect, options);
-            if(angular.isDefined($(select)[0])) {
-                $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
-            }
         });
     }
     /**
@@ -493,9 +491,7 @@
                     select = $('input[id="' + $attr.id + '"]');
                     select.select2(options);
 
-                    if(angular.isDefined($(select)[0])) {
-                        $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
-                    }
+                    $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
 
                     updateSelectedItemsOnDisplay($scope, select, options, inputOptionsLabelProperty, 'input');
                     $scope.$watch('ngModel', function () {
