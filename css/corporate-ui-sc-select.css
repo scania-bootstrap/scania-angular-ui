@@ -4,27 +4,14 @@
 }
  .app label.select-label {
      font-size: 1.2rem;
+     font-family: "Scania Sans Condensed";
 }
  .select2-container.select2-container-disabled .select2-choice {
-     opacity: 0.3;
-     background-color: #bcbcbc;
-     border: 2px solid grey!important;
+     background-color: #F7F7F7;
+     border: none;
 }
  .select2-container.select2-container-disabled .select2-choice .select2-arrow {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPSIxNzkyIiBoZWlnaHQ9IjE3OTIiIHZpZXdCb3g9IjAgMCAxNzkyIDE3OTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzOTUgNzM2cTAgMTMtMTAgMjNsLTQ2NiA0NjZxLTEwIDEwLTIzIDEwdC0yMy0xMGwtNDY2LTQ2NnEtMTAtMTAtMTAtMjN0MTAtMjNsNTAtNTBxMTAtMTAgMjMtMTB0MjMgMTBsMzkzIDM5MyAzOTMtMzkzcTEwLTEwIDIzLTEwdDIzIDEwbDUwIDUwcTEwIDEwIDEwIDIzeiIvPjwvc3ZnPg==);
-     width: 25px;
-     color: #242424;
-     background-position: center center;
-     background-size: 40px;
-     background-repeat: no-repeat;
-     outline: none;
-     padding: 0;
-     border-color: #ccc;
-     border-radius: 0px;
-     font-family: "Scania Sans Semi Condensed", Helvetica, Arial, sans-serif;
-     -webkit-box-shadow: none;
-     box-shadow: none;
-     border-left: none;
+     background-color: transparent;
 }
  .select2-container .select2-choice {
      border: none;
@@ -41,13 +28,15 @@
  .app .select2-container .select2-choice {
      padding: 10px 5px 10px 12px;
      margin: 0px 0px 0px 0px;
-     border: 1px solid transparent;
+     border: 1px solid #E2E2E2;
      display: table;
+     height: 42px;
      width: 100%;
-     line-height: unset;
+     line-height: inherit;
 }
  .app header.c-page-header .select2-container .select2-choice {
      background-color: #FFF;
+     border: 1px solid #E2E2E2;
 }
  .compact .select2-container .select2-choice {
      height: 34px;
@@ -62,7 +51,7 @@
 }
  .select2-container .select2-choice .select2-arrow {
      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPSIxNzkyIiBoZWlnaHQ9IjE3OTIiIHZpZXdCb3g9IjAgMCAxNzkyIDE3OTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzOTUgNzM2cTAgMTMtMTAgMjNsLTQ2NiA0NjZxLTEwIDEwLTIzIDEwdC0yMy0xMGwtNDY2LTQ2NnEtMTAtMTAtMTAtMjN0MTAtMjNsNTAtNTBxMTAtMTAgMjMtMTB0MjMgMTBsMzkzIDM5MyAzOTMtMzkzcTEwLTEwIDIzLTEwdDIzIDEwbDUwIDUwcTEwIDEwIDEwIDIzeiIvPjwvc3ZnPg==);
-     color: #242424;
+     color: #53565A;
      width: 25px;
      background-position: center center;
      background-size: 40px;
@@ -79,7 +68,7 @@
      line-height: unset;
 }
  .app .select2-container .select2-choice .select2-arrow {
-    width: 25px;
+    width: 30px;
      vertical-align: middle;
      display: table-cell;
      background-size: 27px;
@@ -128,7 +117,7 @@
      background-image: none;
      padding: 10px;
      background-color: #f5f5f5;
-     border: 8px solid #FFFF;
+     border: 8px solid #fff;
      z-index: 1;
 }
  .compact .select2-search {
@@ -177,7 +166,7 @@
      display: none;
 }
  .select2-result-selectable{
-     border-bottom: 2px solid rgb(240, 240, 240);
+     border-bottom: 1px solid rgb(240, 240, 240);
      padding: 10px;
 }
  .select2-result-selectable:first-child {
@@ -189,7 +178,7 @@
      padding: 0px;
     /*color: #999;
     */
-     color: #242424;
+     color: #53565A;
      -webkit-box-shadow: none;
      box-shadow: none;
      font-size: 1.4rem;
@@ -197,8 +186,6 @@
 
  .select2-results .select2-result-label {
      padding: 0px;
-     
-   
 }
  .app .select2-results {
      margin: 0px;
@@ -233,12 +220,12 @@
      min-height: 42px;
      padding: 0px;
      margin: 0;
-     border: 1px solid transparent;
-     display: table;
+     border: 1px solid #E2E2E2;
      width: 100%;
      font-size: 0;
      background: #f5f5f5;
      line-height: inherit;
+     height: 42px;
 }
  .app .select2-container-multi .select2-choices {
 }
@@ -320,8 +307,8 @@
      /*background:#f0f0f0;*/
      color: #333;
      direction: rtl;
-     font-size: 1.2rem;
-     line-height: unset;
+     font-size: 1.4rem;
+     line-height: inherit;
 }
  .select2-container-multi .select2-choices .select2-search-choice > div {
      display: table-cell;
@@ -379,12 +366,12 @@
 }
  .select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:hover {
      opacity: 1;
-     background-position: center
+     background-position: center;
 }
  header.c-page-header .select2-container-multi .select2-choices .select2-search-choice {
-     border: 1px solid grey;
-     padding: 5px 5px 5px 5px;
-     margin: 3px 5px 5px 5px;
+     border: 1px solid #e2e2e2;
+     padding: 4px 5px 5px 5px;
+     margin: 4px 5px 5px 5px;
      background-color: #f0f0f0;
 }
  .select2-container-multi .select2-choices .select2-search-choice-focus {
@@ -400,7 +387,7 @@
  .app table .select2-container .select2-choice, .compact .select2-container .select2-choice {
      height: 30px;
      line-height: 32px;
-     font-size: 1.2rem;
+     font-size: 1.4rem;
      margin-bottom: 0px;
      background: #f5f5f5;
 }

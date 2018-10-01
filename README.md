@@ -86,11 +86,11 @@ A complete example can be found on respective extension.
 
 If you want to contribute, please:
 
-	* Fork the project.
-	* Run test (karma start karma.config.js)
-	* Make your feature addition or bug fix and test it.
-	* Run test to make sure you haven't break anything.
-	* Send me a pull request on Github.
+    * Fork the project.
+    * Run test (karma start karma.config.js)
+    * Make your feature addition or bug fix and test it.
+    * Run test to make sure you haven't break anything.
+    * Send me a pull request on Github.
 
 ## License
 
