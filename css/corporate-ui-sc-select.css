@@ -2,10 +2,6 @@
     margin-bottom: 10px;
      font-family: "Scania Sans Semi Condensed";
 }
- .app label.select-label {
-     font-size: 1.2rem;
-     font-family: "Scania Sans Condensed";
-}
  .select2-container.select2-container-disabled .select2-choice {
      background-color: #F7F7F7;
      border: none;
@@ -24,6 +20,7 @@
      overflow: auto;
      position: static;
      line-height: unset;
+     color: inherit !important;
 }
  .app .select2-container .select2-choice {
      padding: 10px 5px 10px 12px;
@@ -32,7 +29,8 @@
      display: table;
      height: 42px;
      width: 100%;
-     line-height: inherit;
+     line-height: unset;
+     border: 1px solid #e2e2e2;
 }
  .app header.c-page-header .select2-container .select2-choice {
      background-color: #FFF;
@@ -402,6 +400,7 @@
 }
  .app .form-control.select2-container {
      padding: 0;
+     border: none;
 }
  .compact .form-control.select2-container {
      padding: 0;
