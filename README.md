@@ -24,9 +24,9 @@ The ```-tpls``` file contains the templates bundled in JavaScript, include it if
 
 ## Installation
 
-     npm install scania-angular-ui
+      npm install scania-angular-ui
 
-This will install `scania-angular-ui` and all dependencies including `corporate-ui` in your `node_modules` directory
+This will install `scania-angular-ui` and `corporate-ui` in your `node_modules` directory and all dependencies in your `bower_components` directory
 
 OR
      bower install scania-angular-ui
@@ -39,7 +39,7 @@ and `corporate-ui` in your `node_modules` directory
 
 Add the following script to your index.html file and you are good to go :<br/>
 
-    ROOT_DIR = `bower_components` or `node_modules`
+ROOT_DIR = `bower_components` or `node_modules`
 
 
     <link rel="stylesheet" type="text/css"  href="<ROOT_DIR>/scania-angular-ui/src/ui-bootstrap/ui-bootstrap-custom-0.13.4-csp.css">
