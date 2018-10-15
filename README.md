@@ -25,29 +25,38 @@ The ```-tpls``` file contains the templates bundled in JavaScript, include it if
 
 ## Installation
 
-     bower install scania-angular-ui
+      npm install scania-angular-ui
+
+This will install `scania-angular-ui` and all dependencies in your `node_modules` directory
+
+     OR
+          bower install scania-angular-ui
+
+ This will install `scania-angular-ui` and all dependencies in your `bower_components` directory
+
 
 #Usage
 
 Add the following script to your index.html file and you are good to go :<br/>
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        or
-    <link href="bower_components/scania-bootstrap-ui/css/scania-bootstrap.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css"  href="/bower_components/scania-angular-ui/src/ui-bootstrap/ui-bootstrap-custom-0.13.4-csp.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/scania-angular-ui/css/scania-angular-ui.css" >
-    <link rel="stylesheet" href="bower_components/select2/select2.css"/><br/>
-    <link href="bower_components/select2-bootstrap-css/select2-bootstrap.min.css"  rel="stylesheet" type="text/css">
+ROOT_DIR = `bower_components` or `node_modules`
 
-    <script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
-    <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
-    <script src="bower_components/select2/select2.js"></script>
-    <script src="bower_components/flow.js/dist/flow.js"></script>
-    <script src="bower_components/ng-flow/dist/ng-flow.js"></script>
-    <script src="/bower_components/scania-angular-ui/src/ui-bootstrap/ui-bootstrap-custom-tpls-0.13.4.min.js"></script>
 
-    <script src="bower_components/scania-angular-ui/src/scania-angular-ui.js"></script>
-    <script src="bower_components/scania-angular-ui/src/scania-angular-ui-tpls.js"></script> (if you want to use default templates boudled with scania-angular-ui)
+    <link href="<ROOT_DIR>/bootstrap/3.3.4/css/bootstrap.min.css"  rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css"  href="<ROOT_DIR>/scania-angular-ui/src/ui-bootstrap/ui-bootstrap-custom-0.13.4-csp.css">
+    <link rel="stylesheet" href="<ROOT_DIR>/select2-bootstrap-css/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="<ROOT_DIR>/select2/select2.css"/><br/>
+    <link rel="stylesheet" type="text/css" href="<ROOT_DIR>/scania-angular-ui/css/scania-angular-ui.css" >
+
+    <script type="text/javascript" src="<ROOT_DIR>/jquery/jquery.js"></script>
+    <script type="text/javascript" src="<ROOT_DIR>/underscore/underscore.js"></script>
+    <script src="<ROOT_DIR>/select2/select2.js"></script>
+    <script src="<ROOT_DIR>/flow.js/dist/flow.js"></script>
+    <script src="<ROOT_DIR>/ng-flow/dist/ng-flow.js"></script>
+    <script src="<ROOT_DIR>/scania-angular-ui/src/ui-bootstrap/ui-bootstrap-custom-tpls-0.13.4.min.js"></script>
+
+    <script src="<ROOT_DIR>/scania-angular-ui/src/scania-angular-ui.js"></script>
+    <script src="<ROOT_DIR>/scania-angular-ui/src/scania-angular-ui-tpls.js"></script> (if you want to use default templates boudled with scania-angular-ui)
 
 
 Next inject the directive into your app
