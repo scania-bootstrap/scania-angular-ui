@@ -1,6 +1,6 @@
 {
   "name": "scania-angular-ui",
-  "version": "3.1.0_rc",
+  "version": "3.1.0",
   "dependencies": {
     "jasmine": "^2.3.1",
     "jasmine-core": "^2.3.4",
