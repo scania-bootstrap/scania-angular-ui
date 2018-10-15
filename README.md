@@ -35,6 +35,7 @@ OR
 This will install `scania-angular-ui` and all dependencies execpt `corporate-ui` in your `bower_components` directory
 and `corporate-ui` in your `node_modules` directory
 
+
 #Usage
 
 Add the following script to your index.html file and you are good to go :<br/>
