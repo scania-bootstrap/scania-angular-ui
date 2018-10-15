@@ -5,10 +5,10 @@
   "main": [
     "src/scania-angular-ui.js",
     "src/scania-angular-ui-tpls.js",
-    "less/scania-angular-ui.less",
-    "less/select2.png",
-    "less/select2x2.png",
-    "less/select2-spinner.gif"
+    "css/scania-angular-ui.css",
+    "images/select2.png",
+    "images/select2x2.png",
+    "images/select2-spinner.gif"
   ],
   "keywords": [
     "scania-angular-lightbox",
