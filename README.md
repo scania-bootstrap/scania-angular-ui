@@ -29,8 +29,8 @@ The ```-tpls``` file contains the templates bundled in JavaScript, include it if
 This will install `scania-angular-ui` and `corporate-ui` in your `node_modules` directory and all dependencies in your `bower_components` directory
 
 OR
-     bower install scania-angular-ui
-     npm install corporate-ui
+     `bower install scania-angular-ui`
+     `npm install corporate-ui`
 
 This will install `scania-angular-ui` and all dependencies execpt `corporate-ui` in your `bower_components` directory
 and `corporate-ui` in your `node_modules` directory
