@@ -14,39 +14,39 @@ The ```-tpls``` file contains the templates bundled in JavaScript, include it if
 
 
 ##Requirements
-
+<a href="https://scania.github.io/corporate-ui-docs/">Scania Corporate UI</a><br/>
 <a href="http://getbootstrap.com/">Bootstrap</a><br/>
 <a href="https://angularjs.org/">Angular animate</a><br/>
 <a href="http://flowjs.github.io/ng-flow/">flow/ng-flow</a><br/>
 <a href="https://github.com/ivaynberg/select2">Select2 V3.5.2</a><br/>
-<a href="https://github.com/t0m/select2-bootstrap-css/tree/bootstrap3">select2-bootstrap-css V1.4.6</a><br/>
 <a href="https://github.com/jashkenas/underscore">Underscore</a><br/>
 <a href="http://jquery.com/">JQuery</a><br/>
 
 ## Installation
 
-      npm install scania-angular-ui
+     npm install scania-angular-ui
 
-This will install `scania-angular-ui` and all dependencies in your `node_modules` directory
+This will install `scania-angular-ui` and all dependencies including `corporate-ui` in your `node_modules` directory
 
-     OR
-          bower install scania-angular-ui
+OR
+     bower install scania-angular-ui
+     npm install corporate-ui
 
- This will install `scania-angular-ui` and all dependencies in your `bower_components` directory
-
+This will install `scania-angular-ui` and all dependencies execpt `corporate-ui` in your `bower_components` directory
+and `corporate-ui` in your `node_modules` directory
 
 #Usage
 
 Add the following script to your index.html file and you are good to go :<br/>
 
-ROOT_DIR = `bower_components` or `node_modules`
+    ROOT_DIR = `bower_components` or `node_modules`
 
 
-    <link href="<ROOT_DIR>/bootstrap/3.3.4/css/bootstrap.min.css"  rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css"  href="<ROOT_DIR>/scania-angular-ui/src/ui-bootstrap/ui-bootstrap-custom-0.13.4-csp.css">
-    <link rel="stylesheet" href="<ROOT_DIR>/select2-bootstrap-css/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/corporate-ui/dist/css/corporate-ui.css">
     <link rel="stylesheet" href="<ROOT_DIR>/select2/select2.css"/><br/>
     <link rel="stylesheet" type="text/css" href="<ROOT_DIR>/scania-angular-ui/css/scania-angular-ui.css" >
+    <link href="<ROOT_DIR>/scania-angular-ui/css/corporate-ui-sc-select.css"  rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="<ROOT_DIR>/jquery/jquery.js"></script>
     <script type="text/javascript" src="<ROOT_DIR>/underscore/underscore.js"></script>
