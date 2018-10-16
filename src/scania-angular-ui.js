@@ -534,13 +534,13 @@
             landscapetablet: 'landscape.tablet.detected',
             desktop: 'desktop.detected',
             smdevice: 'sm.device.detected'
-        }
+        };
         var service = {
             isDevice: _isDevice,
             isLargeDevice: _isLargeDevice,
             isMediumDevice: _isSMDevice,
             events: _events
-        }
+        };
 
         return service;
 
