@@ -208,6 +208,7 @@
 }
  .select2-container.select2-container-multi {
      width: 100%;
+     height: auto;
      display: table;
      overflow: hidden;
 }
@@ -424,6 +425,7 @@ header.c-page-header table .select2-container-multi .select2-choices .select2-se
 
  .app table .select2-container .select2-choice .select2-arrow {
      width: 17%;
+     background-size: 17px;
 }
  .select2-search > .scania-icon-search ~ input[type="text"] {
      width: 70%;
