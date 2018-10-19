@@ -17,7 +17,7 @@
      white-space: nowrap;
      color: #444;
      border-radius: 0px;
-     background: #f5f5f5;
+     background: #f0f0f0;;
      background-image: none;
      height: auto;
      overflow: auto;
@@ -98,7 +98,7 @@
      border: 1px solid #f5f5f5;
      border-radius: 0px;
      box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 8px;
-     z-index: 0;
+     z-index: 100;
 }
  .select2-drop.select2-drop-above {
      margin-top: 1px;
