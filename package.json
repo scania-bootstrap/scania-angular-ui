@@ -1,11 +1,30 @@
 {
   "name": "scania-angular-ui",
-  "version": "1.0.0",
+  "version": "3.1.0",
   "dependencies": {
     "jasmine": "^2.3.1",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.35",
     "karma-chrome-launcher": "^0.1.12",
     "karma-jasmine": "^0.3.5"
-  }
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "authors": [
+    "Scania",
+    "Mohammed Ayowa <mohammed.ayowa@scania.com> (mohammed.ayowa@scania.com)"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scania-bootstrap/scania-angular-ui.git"
+  },
+  "homepage": "https://github.com/scania-bootstrap/scania-angular-ui"
 }
