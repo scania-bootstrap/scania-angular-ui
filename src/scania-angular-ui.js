@@ -217,7 +217,6 @@
         });
         return options;
     }
-
     /**
      * @ngdoc method
      * @name scania.angular.select2#updateSelectedItemsOnDisplay
@@ -327,9 +326,6 @@
                 updateSelectedItemsOnDisplay($scope, select, options);
             });
             registerEvents($scope, scSelect, options);
-            if(angular.isDefined($(select)[0])) {
-                $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
-            }
         });
     }
     /**
@@ -484,6 +480,7 @@
                     inputOptionsLabelProperty = '';
 
                 $timeout(function () {
+
                     options.data = {results: JSON.parse($attr.data), text: $attr.label};
                     options.createSearchChoice = $scope.createSearchChoice;
                     options.tokenSeparators = $scope.tokenSeparators || tokenSeparators;
@@ -492,10 +489,6 @@
 
                     select = $('input[id="' + $attr.id + '"]');
                     select.select2(options);
-
-                    if(angular.isDefined($(select)[0])) {
-                        $($(select)[0].previousSibling).find('div.select2-search').prepend('<i class="scania-icon-search sm"></i>');
-                    }
 
                     updateSelectedItemsOnDisplay($scope, select, options, inputOptionsLabelProperty, 'input');
                     $scope.$watch('ngModel', function () {
@@ -534,13 +527,13 @@
             landscapetablet: 'landscape.tablet.detected',
             desktop: 'desktop.detected',
             smdevice: 'sm.device.detected'
-        };
+        }
         var service = {
             isDevice: _isDevice,
             isLargeDevice: _isLargeDevice,
             isMediumDevice: _isSMDevice,
             events: _events
-        };
+        }
 
         return service;
 
