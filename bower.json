@@ -8,7 +8,10 @@
     "css/scania-angular-ui.css",
     "images/select2.png",
     "images/select2x2.png",
-    "images/select2-spinner.gif"
+    "images/select2-spinner.gif",
+    "src/jquery-ui/jquery-ui.js",
+    "src/ui-bootstrap/ui-bootstrap-custom-tpls-0.13.4.min.js",
+    "src/ui-bootstrap/ui-bootstrap-custom-0.13.4-csp.css"
   ],
   "keywords": [
     "scania-angular-lightbox",
